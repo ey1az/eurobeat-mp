@@ -14,22 +14,100 @@ const music = new Audio();
 
 const songs = [
     {
-        path: 'assets/Daniel - Frontal Impact.m4a',
+        path: 'assets/music/Daniel - Frontal Impact.m4a',
         displayName: 'Frontal Impact',
-        cover: 'assets/1.jpg',
+        cover: 'assets/image/D-FI.jpg',
         artist: 'Daniel',
     },
     {
-        path: 'assets/Dave Rodgers - Deja Vu.m4a',
+        path: 'assets/music/Dave Rodgers - Deja Vu.m4a',
         displayName: 'Deja Vu',
-        cover: 'assets/2.jpg',
+        cover: 'assets/image/DR-DV.jpg',
         artist: 'Dave Rodgers',
     },
     {
-        path: 'assets/Dave Simon - I Need Your Love.mp3',
+        path: 'assets/music/Dave Simon - I Need Your Love.mp3',
         displayName: 'I Need Your Love',
-        cover: 'assets/3.jpg',
+        cover: 'assets/image/DS-INYL.jpg',
         artist: 'Dave Simon',
+    },
+    {
+        path: 'assets/music/Delta Queens - Dance Around The World.m4a',
+        displayName: 'Dance Around The World',
+        cover: 'assets/image/DQ-DATW.jpg',
+        artist: 'Delta Queens',
+    },
+    {
+        path: 'assets/music/Denise - Burning Like a Flame.m4a',
+        displayName: 'Burning Like a Flame',
+        cover: 'assets/image/D-BLAF.jpg',
+        artist: 'Denise',
+    },
+    {
+        path: 'assets/music/Ducky Chix - Prayer.mp3',
+        displayName: 'Prayer',
+        cover: 'assets/image/DC-P.jpg',
+        artist: 'Ducky Chix',
+    },
+    {
+        path: 'assets/music/Go 2 - Power.m4a',
+        displayName: 'Power',
+        cover: 'assets/image/G2-P.jpg',
+        artist: 'Go 2',
+    },
+    {
+        path: 'assets/music/Ken Blast - The Top.m4a',
+        displayName: 'The Top',
+        cover: 'assets/image/KB-TT.jpg',
+        artist: 'Ken Blast',
+    },
+    {
+        path: 'assets/music/Leslie Parrish - Killing My Love.mp3',
+        displayName: 'Killing My Love',
+        cover: 'assets/image/LP-KML.jpg',
+        artist: 'Leslie Parrish',
+    },
+    {
+        path: 'assets/music/Leslie Parrish - Remember Me.mp3',
+        displayName: 'Remember Me',
+        cover: 'assets/image/LP-RM.jpg',
+        artist: 'Leslie Parrish',
+    },
+    {
+        path: 'assets/music/Leslie Parrish - Save Me.mp3',
+        displayName: 'Save Me',
+        cover: 'assets/image/LP-SM.jpg',
+        artist: 'Leslie Parrish',
+    },
+    {
+        path: 'assets/music/Lupin - Black U.F.O.m4a',
+        displayName: 'Black UFO',
+        cover: 'assets/image/L-BUFO.jpg',
+        artist: 'Lupin',
+    },
+    {
+        path: 'assets/music/m.o.v.e. - Rage Your Dream.m4a',
+        displayName: 'Rage Your Dream',
+        cover: 'assets/image/MOVE-RYD.jpg',
+        artist: 'm.o.v.e.',
+    },
+    {
+        path: 'assets/music/Max Coveri - Running In The 90s.mp3',
+        displayName: 'Running In The 90s',
+        cover: 'assets/image/MC-RIT90s.jpg',
+        artist: 'Max Coveri',
+    },
+    {
+        path: 'assets/music/Niko - Night of Fire.m4a',
+        displayName: 'Night of Fire',
+        cover: 'assets/image/N-NOF.jpg',
+        artist: 'Niko',
+    },
+    {
+        path: 'assets/music/Priscilla - Love Is In Danger.mp3',
+        displayName: 'Love Is In Danger',
+        cover: 'assets/image/P-LIID.jpg',
+        artist: 'Priscilla',
     }
 ];
 
