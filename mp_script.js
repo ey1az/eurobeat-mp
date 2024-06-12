@@ -8,7 +8,8 @@ const image = document.getElementById('cover'),
     prevBtn = document.getElementById('prev'),
     nextBtn = document.getElementById('next'),
     playBtn = document.getElementById('play'),
-    background = document.getElementById('bg-img');
+    background = document.querySelector('.background');
+needle = document.getElementById('needle');
 
 const music = new Audio();
 
@@ -124,20 +125,18 @@ function togglePlay() {
 
 function playMusic() {
     isPlaying = true;
-    // Change play button icon
     playBtn.classList.replace('fa-play', 'fa-pause');
-    // Set button hover title
     playBtn.setAttribute('title', 'Pause');
     music.play();
+    reactToMusic();
 }
 
 function pauseMusic() {
     isPlaying = false;
-    // Change pause button icon
     playBtn.classList.replace('fa-pause', 'fa-play');
-    // Set button hover title
     playBtn.setAttribute('title', 'Play');
     music.pause();
+
 }
 
 function loadMusic(song) {
@@ -162,6 +161,9 @@ function updateProgressBar() {
     const formatTime = (time) => String(Math.floor(time)).padStart(2, '0');
     durationEl.textContent = `${formatTime(duration / 60)}:${formatTime(duration % 60)}`;
     currentTimeEl.textContent = `${formatTime(currentTime / 60)}:${formatTime(currentTime % 60)}`;
+
+    const needleRotation = (currentTime / duration) * 180 - 90;
+    needle.style.transform = `rotate(${needleRotation}deg)`;
 }
 
 function setProgressBar(e) {
@@ -178,3 +180,24 @@ music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
 
 loadMusic(songs[musicIndex]);
+
+function reactToMusic() {
+    beatInterval = setInterval(() => {
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            if (isPlaying) {
+                star.style.opacity = Math.random();
+            } else {
+                star.style.opacity = 1;
+            }
+        });
+    }, 100);
+}
+
+for (let i = 0; i < 200; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.left = `${Math.random() * 100}%`;
+    background.appendChild(star);
+}
