@@ -9,7 +9,9 @@ const image = document.getElementById('cover'),
     nextBtn = document.getElementById('next'),
     playBtn = document.getElementById('play'),
     background = document.querySelector('.background');
-needle = document.getElementById('needle');
+    needle = document.getElementById('needle');
+    showListBtn = document.getElementById('show-list-btn'),
+    songList = document.getElementById('song-list');
 
 const music = new Audio();
 
@@ -201,3 +203,30 @@ for (let i = 0; i < 200; i++) {
     star.style.left = `${Math.random() * 100}%`;
     background.appendChild(star);
 }
+
+function toggleSongList() {
+    songList.classList.toggle('hidden');
+}
+
+function loadSongList() {
+    songList.innerHTML = '';
+    songs.forEach((song, index) => {
+        const songItem = document.createElement('div');
+        songItem.classList.add('song-item');
+        songItem.textContent = `${song.displayName} - ${song.artist}`;
+        songItem.addEventListener('click', () => {
+            musicIndex = index;
+            loadMusic(songs[musicIndex]);
+            playMusic();
+            toggleSongList();
+        });
+        songList.appendChild(songItem);
+    });
+}
+
+showListBtn.addEventListener('click', () => {
+    toggleSongList();
+    if (!songList.classList.contains('hidden')) {
+        loadSongList();
+    }
+});

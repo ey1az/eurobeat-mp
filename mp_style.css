@@ -47,6 +47,7 @@ body {
 }
 
 .player-img {
+    position: relative;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -143,4 +144,85 @@ h3 {
 
 .fa-solid:hover {
     color: orange;
+}
+
+#show-list-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+#show-list-btn:hover {
+    background-color: orange;
+}
+
+.song-list {
+    opacity: 1;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.song-list.hidden {
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.song-item {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.song-item:hover {
+    background-color: orange;
+}
+
+.container:hover #show-list-btn {
+    display: block;
+}
+
+.watermark {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 1000;
+    font-family: 'Orbitron', sans-serif;
 }
