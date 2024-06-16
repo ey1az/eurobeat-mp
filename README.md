@@ -24,6 +24,6 @@ Check out the live version of the website:
 - **Show List Button**: Click on song image to toggle the visibility of the song list.
 - **Song List Items**: Click on a song from the list to play it.
 
-## Disclaimer
+## ! Disclaimer !
 
 *This project was created purely for fun and educational purposes. It is not intended to infringe upon the rights of musicians or any other copyright holders. All music used in this project is for demonstration purposes only, and I do not claim any ownership over the music.*
